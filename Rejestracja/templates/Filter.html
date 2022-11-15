@@ -1,0 +1,49 @@
+{% extends 'Reg_paintshop.html' %}
+{% block filtr %} 
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="pl"/>
+    <meta name="Description" content="test"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <title>Produkcja Demarko</title>    
+</head>
+
+<style>
+    th,td {border: 1px black solid;
+    }
+
+</style>
+
+<body>    
+   
+   <form method="get">
+        {{ filtrhtml.form}}
+ 
+    <button type="submit">Szukaj</button>
+   </form>
+  
+    
+    <table>
+    <tr>
+        <th>Pracwnik</th>
+        <th>Nr Zlecenia</th>
+        <th>Kod Zlecenia</th>
+        <th>Godziny przepracowane</th>
+        <th>Data aktwyności</th>
+    </tr>
+    {% for Rejestracja_Lakiernia in Tabelka %}
+    </tr>
+    <tr>
+        <td>{{Rejestracja_Lakiernia.Pracownik}}</td>
+        <td>{{Rejestracja_Lakiernia.Nr_Zlecenia}}</td>
+        <td>{{Rejestracja_Lakiernia.Kod_Zlecenia}}</td>
+        <td>{{Rejestracja_Lakiernia.Czas}}</td>
+        <td>{{Rejestracja_Lakiernia.Data}}</td>
+    </tr>   
+    {% endfor %}
+    </table>
+</html>
+
+{% endblock filtr %}

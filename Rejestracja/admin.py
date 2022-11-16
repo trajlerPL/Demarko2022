@@ -52,3 +52,4 @@ class PostAdmin(ExportActionMixin, admin.ModelAdmin):
 
 
 admin.site.register(Rejestracja_Lakiernia, PostAdmin)
+ 

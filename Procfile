@@ -1,1 +1,1 @@
-web: gunicorn demarko2022:app --log-file -
+web: gunicorn Demarko.wsgi
